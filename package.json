@@ -1,0 +1,12 @@
+{
+  "name": "test-danger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/olibos/test-danger.git",
+  "author": "Olivier Bossaer <olivier.bossaer@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "danger": "^11.2.0",
+    "typescript": "^4.9.4"
+  }
+}
