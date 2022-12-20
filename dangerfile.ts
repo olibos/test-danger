@@ -23,7 +23,7 @@ if (hasPackageChanges && !hasLockfileChanges) {
   warn("There are package.json changes with no corresponding lockfile changes")
 }
 
-const blacklist = "spaced-between"
+const blacklist = "jquery"
 
 schedule(async () => {
   const packageDiff = await danger.git.JSONDiffForFile("package.json")
