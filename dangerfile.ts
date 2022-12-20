@@ -6,8 +6,8 @@ import {
   warn,
 } from 'danger';
 
-const modifiedMD = danger.git.modified_files.join("\n- ")
-message("Changed Files in this PR: \n- " + modifiedMD);
+const modifiedMD = danger.git.modified_files.join("<br />- ")
+message("Changed Files in this PR: <br />- " + modifiedMD);
 
 message(`Head: ${danger.github.pr.head.ref}\nBase: ${danger.github.pr.base.ref}\nTitle: ${danger.github.pr.title}`);
 if (!danger.github.pr.assignee) {
