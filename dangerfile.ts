@@ -9,7 +9,8 @@ import {
 const modifiedMD = danger.git.modified_files.join("<br />- ")
 message("Changed Files in this PR: <br />- " + modifiedMD);
 
-message(`Head: ${danger.github.pr.head.ref}\nBase: ${danger.github.pr.base.ref}\nTitle: ${danger.github.pr.title}`);
+message(`Head: ${danger.github.pr.head.ref}<br />Base: ${danger.github.pr.base.ref}<br />Title: ${danger.github.pr.title}
+Good Title: ${danger.github.pr.head.ref.trim().replace(/-/g, ' ').toLowerCase()===danger.github.pr.title.trim().toLowerCase()}`);
 if (!danger.github.pr.assignee) {
   fail("This pull request needs an assignee, and optionally include any reviewers.")
 }
